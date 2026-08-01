@@ -1,0 +1,113 @@
+#
+# Codemagic configuration for Git Folder Uploader.
+#
+# The project has no third-party dependencies, so there is nothing to resolve
+# before building: no CocoaPods, no Carthage, no Swift Package Manager graph.
+# The workflow therefore only builds the checked-in Xcode project and packages
+# the resulting .app into an unsigned .ipa by hand.
+#
+# Code signing is disabled at every level (project build settings *and* the
+# xcodebuild invocation) so no Apple Developer account, certificate or
+# provisioning profile is required. The produced IPA can be installed with
+# sideloading tools such as Sideloadly or AltStore, which re-sign it locally.
+#
+
+workflows:
+  ios-unsigned-ipa:
+    name: iOS unsigned IPA
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+
+    environment:
+      xcode: 16.2
+      vars:
+        XCODE_PROJECT: "GitFolderUploader.xcodeproj"
+        XCODE_SCHEME: "GitFolderUploader"
+        CONFIGURATION: "Release"
+        BUILD_DIR: "$CM_BUILD_DIR/build"
+
+    triggering:
+      events:
+        - push
+        - tag
+        - pull_request
+      cancel_previous_builds: true
+
+    scripts:
+      - name: Show toolchain
+        script: |
+          set -euo pipefail
+          xcodebuild -version
+          swift --version
+
+      - name: Verify project integrity
+        script: |
+          set -euo pipefail
+          test -d "$XCODE_PROJECT" || { echo "Missing $XCODE_PROJECT"; exit 1; }
+          xcodebuild -list -project "$XCODE_PROJECT"
+
+      - name: Build unsigned application
+        script: |
+          set -euo pipefail
+          xcodebuild \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -configuration "$CONFIGURATION" \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$BUILD_DIR" \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_ENTITLEMENTS="" \
+            ENABLE_BITCODE=NO \
+            build
+
+      - name: Package Payload into an IPA
+        script: |
+          set -euo pipefail
+
+          APP_PATH="$BUILD_DIR/Build/Products/$CONFIGURATION-iphoneos/$XCODE_SCHEME.app"
+          test -d "$APP_PATH" || { echo "Build product not found at $APP_PATH"; exit 1; }
+
+          # An IPA is a zip archive whose single top-level directory is Payload.
+          WORK_DIR="$CM_BUILD_DIR/ipa"
+          rm -rf "$WORK_DIR"
+          mkdir -p "$WORK_DIR/Payload"
+          cp -R "$APP_PATH" "$WORK_DIR/Payload/"
+
+          # Remove any signature Xcode may still have written; the artifact is
+          # intentionally unsigned so sideloading tools can sign it themselves.
+          rm -rf "$WORK_DIR/Payload/$XCODE_SCHEME.app/_CodeSignature"
+          rm -f  "$WORK_DIR/Payload/$XCODE_SCHEME.app/embedded.mobileprovision"
+
+          VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" \
+            "$WORK_DIR/Payload/$XCODE_SCHEME.app/Info.plist")
+
+          mkdir -p "$CM_BUILD_DIR/artifacts"
+          IPA_PATH="$CM_BUILD_DIR/artifacts/${XCODE_SCHEME}-${VERSION}-unsigned.ipa"
+
+          (cd "$WORK_DIR" && zip -qry "$IPA_PATH" Payload)
+          echo "Created $IPA_PATH ($(du -h "$IPA_PATH" | cut -f1))"
+
+      - name: Verify the archive
+        script: |
+          set -euo pipefail
+          IPA=$(ls "$CM_BUILD_DIR"/artifacts/*.ipa | head -n 1)
+          unzip -l "$IPA" | head -n 20
+
+    # Paths are relative to the cloned repository unless absolute.
+    artifacts:
+      - artifacts/*.ipa
+      - build/Build/Products/Release-iphoneos/*.app
+      - /tmp/xcodebuild_logs/*.log
+
+    # Add recipients here if you want build notifications:
+    #
+    # publishing:
+    #   email:
+    #     recipients:
+    #       - you@example.com
+    #     notify:
+    #       success: true
+    #       failure: true

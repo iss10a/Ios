@@ -1,0 +1,290 @@
+/*
+  Localizable.strings
+  GitFolderUploader
+
+  Arabic localization. Keys are grouped by feature and kept identical across
+  languages; `LocalizationManager` loads the matching .lproj bundle at runtime.
+*/
+
+
+/* MARK: - auth */
+"auth.device.denied" = "تم رفض الطلب في GitHub.";
+"auth.device.expired" = "انتهت صلاحية رمز الجهاز. الرجاء البدء من جديد.";
+"auth.device.failed" = "فشل تفويض الجهاز.";
+"auth.device.instructions" = "افتح GitHub على أي جهاز وأدخل هذا الرمز:";
+"auth.device.missing_client" = "أدخل معرّف تطبيق OAuth أولاً.";
+"auth.device.open" = "فتح GitHub";
+"auth.device.pending" = "بانتظار موافقتك على الطلب في github.com.";
+"auth.device.slow_down" = "تم إبطاء الاستعلام بناءً على طلب GitHub.";
+"auth.device.waiting" = "بانتظار الموافقة";
+"auth.headline" = "رافع مجلدات Git";
+"auth.kind.oauth" = "تدفق أجهزة OAuth";
+"auth.kind.pat" = "رمز وصول شخصي";
+"auth.mode" = "طريقة الدخول";
+"auth.mode.oauth" = "OAuth";
+"auth.mode.token" = "رمز وصول";
+"auth.oauth.client_label" = "معرّف تطبيق OAuth";
+"auth.oauth.hint" = "لا يحتاج تدفق الأجهزة سوى معرّف التطبيق، ولا يُضمَّن أي مفتاح سري داخل التطبيق.";
+"auth.oauth.start" = "احصل على رمز الجهاز";
+"auth.privacy" = "تبقى بيانات الاعتماد على هذا الجهاز، وكل الاتصالات تتم مباشرة مع واجهة GitHub.";
+"auth.signin" = "تسجيل الدخول";
+"auth.subheadline" = "ارفع مجلدات كاملة من تطبيق الملفات مباشرةً إلى GitHub مع الحفاظ على التسلسل الهرمي.";
+"auth.title" = "تسجيل الدخول";
+"auth.token.create" = "أنشئ رمزاً على github.com";
+"auth.token.hint" = "يحتاج الرمز إلى صلاحية ‏“repo”‏. يُحفظ في سلسلة مفاتيح iOS ولا يغادر الجهاز أبداً.";
+"auth.token.label" = "رمز الوصول الشخصي";
+
+/* MARK: - branch */
+"branch.create" = "فرع جديد";
+"branch.create.hint" = "سيبدأ الفرع الجديد من %@.";
+"branch.error.chars" = "هذا الاسم ليس مرجع Git صالحاً.";
+"branch.error.empty" = "أدخل اسم الفرع.";
+"branch.filter" = "تصفية الفروع";
+"branch.name" = "اسم الفرع";
+"branch.title" = "الفروع";
+
+/* MARK: - browser */
+"browser.delete.confirm" = "حذف هذا العنصر؟";
+"browser.delete.message" = "سيتم حذف %@ في إيداع جديد.";
+"browser.deleted" = "تم الحذف";
+"browser.download_folder" = "تنزيل المجلد";
+"browser.empty.message" = "ارفع مجلداً من تطبيق الملفات لتعبئته.";
+"browser.empty.title" = "هذا المجلد فارغ";
+"browser.folder_created" = "تم إنشاء المجلد";
+"browser.folder_name" = "اسم المجلد";
+"browser.new_folder" = "مجلد جديد";
+"browser.new_folder.hint" = "لا يتتبع Git المجلدات الفارغة، لذلك يتم إيداع ملف ‎.gitkeep‎.";
+"browser.new_name" = "الاسم الجديد";
+"browser.no_results.message" = "جرّب كلمة بحث مختلفة.";
+"browser.no_results.title" = "لا توجد نتائج";
+"browser.pull" = "جلب آخر التحديثات";
+"browser.pulled" = "محدَّث";
+"browser.rename" = "إعادة تسمية";
+"browser.renamed" = "تمت إعادة التسمية";
+"browser.search.content" = "بحث داخل محتوى الملفات";
+"browser.search.prompt" = "بحث في الملفات";
+"browser.search.results" = "%d نتيجة";
+"browser.searching" = "جارٍ البحث…";
+"browser.upload_folder" = "رفع مجلد";
+"browser.upload_queued" = "تمت إضافة الرفع إلى القائمة";
+
+/* MARK: - common */
+"common.actions" = "إجراءات";
+"common.cancel" = "إلغاء";
+"common.copy" = "نسخ";
+"common.create" = "إنشاء";
+"common.delete" = "حذف";
+"common.done" = "تم";
+"common.error" = "خطأ";
+"common.loading" = "جارٍ التحميل…";
+"common.ok" = "حسناً";
+"common.refresh" = "تحديث";
+"common.retry" = "إعادة المحاولة";
+"common.save" = "حفظ";
+
+/* MARK: - create */
+"create.auto_init" = "تهيئة بملف README";
+"create.auto_init.hint" = "يلزم وجود إيداع أولي قبل رفع المجلدات، لذا أبقِ هذا الخيار مفعّلاً.";
+"create.description" = "الوصف";
+"create.error.chars" = "استخدم الأحرف والأرقام والنقاط والشرطات فقط.";
+"create.error.empty" = "أدخل اسم المستودع.";
+"create.error.long" = "الاسم طويل جداً.";
+"create.gitignore" = "قالب ‎.gitignore‎ (اختياري)";
+"create.name" = "الاسم";
+"create.private" = "مستودع خاص";
+"create.section.basics" = "الأساسيات";
+"create.section.options" = "خيارات";
+
+/* MARK: - download */
+"download.error.all_failed" = "تعذّر تنزيل أي من الملفات.";
+
+/* MARK: - error */
+"error.cancelled" = "أُلغي.";
+"error.conflict" = "تغيّر المستودع أثناء تنفيذ الطلب.";
+"error.decoding" = "تعذّرت قراءة الاستجابة";
+"error.file_too_large" = "الملف يتجاوز حد 100 ميغابايت:";
+"error.folder_access" = "لم يعد لدى التطبيق إذن قراءة هذا المجلد. اختره مرة أخرى.";
+"error.forbidden" = "تم رفض الوصول. تحقق من صلاحيات الرمز.";
+"error.invalid_response" = "أعاد الخادم استجابة غير متوقعة.";
+"error.invalid_url" = "رابط غير صالح";
+"error.missing_token" = "لا يوجد رمز وصول محفوظ.";
+"error.network" = "خطأ في الشبكة";
+"error.not_found" = "غير موجود.";
+"error.nothing_to_commit" = "لا يوجد ما يمكن إيداعه.";
+"error.rate_limited" = "تم بلوغ حد الطلبات. ستتم إعادة المحاولة قريباً.";
+"error.unauthorized" = "الرمز غير صالح أو منتهي الصلاحية. الرجاء تسجيل الدخول مجدداً.";
+"error.unknown" = "خطأ غير معروف.";
+"error.validation" = "رفض GitHub الطلب.";
+
+/* MARK: - file */
+"file.binary.message" = "هذا ملف ثنائي. صدّره لفتحه في تطبيق آخر.";
+"file.binary.title" = "المعاينة غير متاحة";
+"file.branch" = "الفرع";
+"file.export" = "تصدير";
+"file.path" = "المسار";
+"file.sha" = "بصمة الملف";
+"file.size" = "الحجم";
+
+/* MARK: - folder */
+"folder.error.empty" = "أدخل اسم المجلد.";
+"folder.error.name" = "اسم المجلد هذا غير مسموح.";
+"folder.error.slash" = "لا يمكن أن يحتوي اسم المجلد على شرطات مائلة.";
+
+/* MARK: - rename */
+"rename.error.empty" = "أدخل اسماً جديداً.";
+
+/* MARK: - repos */
+"repos.create" = "مستودع جديد";
+"repos.empty.message" = "أنشئ أول مستودع لك لتبدأ برفع المجلدات.";
+"repos.empty.title" = "لا توجد مستودعات بعد";
+"repos.filter" = "تصفية المستودعات";
+"repos.title" = "المستودعات";
+
+/* MARK: - search */
+"search.none.message" = "جرّب استعلاماً مختلفاً.";
+"search.none.title" = "لم يُعثر على مستودعات";
+"search.prompt" = "ابحث في مستودعات GitHub";
+"search.searching" = "جارٍ البحث…";
+"search.start.message" = "اكتب حرفين على الأقل للبحث في المستودعات العامة والخاصة المتاحة لك.";
+"search.start.title" = "ابحث في GitHub";
+"search.title" = "بحث";
+
+/* MARK: - settings */
+"settings.about.blurb" = "يتصل التطبيق مباشرة بواجهة GitHub REST، ويستخدم واجهة بيانات Git لرفع آلاف الملفات في إيداع واحد.";
+"settings.auth_method" = "طريقة الدخول";
+"settings.language" = "لغة التطبيق";
+"settings.language.hint" = "تتحدث الواجهة فوراً، بما في ذلك اتجاه التخطيط.";
+"settings.language.system" = "حسب النظام";
+"settings.open_profile" = "فتح الملف الشخصي";
+"settings.queue" = "عمليات رفع نشطة";
+"settings.rate_limit" = "الطلبات المتبقية";
+"settings.rate_reset" = "إعادة التعيين";
+"settings.rate_unknown" = "لم تُجرَ أي طلبات في هذه الجلسة بعد.";
+"settings.repos.private" = "مستودعات خاصة";
+"settings.repos.public" = "مستودعات عامة";
+"settings.section.about" = "حول";
+"settings.section.account" = "الحساب";
+"settings.section.appearance" = "المظهر";
+"settings.section.diagnostics" = "التشخيص";
+"settings.section.language" = "اللغة";
+"settings.signout" = "تسجيل الخروج";
+"settings.signout.confirm" = "تسجيل الخروج؟";
+"settings.signout.message" = "سيتم حذف الرمز المحفوظ وإلغاء عمليات الرفع المعلّقة.";
+"settings.theme" = "السمة";
+"settings.theme.dark" = "داكن";
+"settings.theme.light" = "فاتح";
+"settings.theme.system" = "حسب النظام";
+"settings.version" = "الإصدار";
+
+/* MARK: - tab */
+"tab.repositories" = "المستودعات";
+"tab.search" = "بحث";
+"tab.settings" = "الإعدادات";
+"tab.uploads" = "الرفع";
+
+/* MARK: - upload */
+"upload.clear_finished" = "مسح المنتهية";
+"upload.detail.branch" = "الفرع";
+"upload.detail.commit" = "الإيداع";
+"upload.detail.destination" = "الوجهة";
+"upload.detail.files" = "الملفات";
+"upload.detail.repository" = "المستودع";
+"upload.detail.size" = "الحجم الكلي";
+"upload.detail.skipped" = "دون تغيير";
+"upload.detail.summary" = "الملخص";
+"upload.detail.transferred" = "المنقول";
+"upload.detail.truncated" = "يتم عرض أول 500 من أصل %d ملف.";
+"upload.empty.message" = "افتح مستودعاً واختر “رفع مجلد” لإضافة عملية.";
+"upload.empty.title" = "لا توجد عمليات رفع";
+"upload.error.empty_folder" = "لا يحتوي المجلد المحدد على ملفات قابلة للرفع.";
+"upload.error.files_failed" = "تعذّر رفع %d ملف.";
+"upload.filter" = "تصفية";
+"upload.filter.all" = "الكل";
+"upload.filter.failed" = "فاشلة";
+"upload.filter.pending" = "قيد الانتظار";
+"upload.filter.skipped" = "متخطاة";
+"upload.filter.uploaded" = "مرفوعة";
+"upload.missing.message" = "تمت إزالة عملية الرفع هذه من القائمة.";
+"upload.missing.title" = "لم يتم العثور على المهمة";
+"upload.options.branch" = "الفرع";
+"upload.options.commit" = "الإيداع";
+"upload.options.custom_path" = "مسار مخصص (اختياري)";
+"upload.options.default_message" = "رفع %@";
+"upload.options.destination" = "الوجهة";
+"upload.options.destination_root" = "جذر المستودع";
+"upload.options.explainer" = "يتم تخطي الملفات الموجودة مسبقاً بنفس المحتوى، ويُرفع كل شيء في إيداع واحد.";
+"upload.options.folder" = "المجلد";
+"upload.options.message" = "رسالة الإيداع";
+"upload.options.place_inside" = "الوضع داخل مجلد باسم “%@”";
+"upload.options.repository" = "المستودع";
+"upload.options.source" = "المصدر";
+"upload.options.start" = "رفع";
+"upload.options.title" = "رفع مجلد";
+"upload.pause" = "إيقاف مؤقت";
+"upload.remove" = "إزالة من القائمة";
+"upload.resume" = "استئناف";
+"upload.resume_all" = "استئناف الكل";
+"upload.section.active" = "قيد التنفيذ";
+"upload.section.finished" = "منتهية";
+"upload.skipped" = "%d دون تغيير";
+"upload.state.cancelled" = "أُلغي";
+"upload.state.committing" = "جارٍ الإيداع";
+"upload.state.comparing" = "مقارنة مع المستودع";
+"upload.state.completed" = "اكتمل";
+"upload.state.failed" = "فشل";
+"upload.state.paused" = "متوقف مؤقتاً";
+"upload.state.queued" = "في القائمة";
+"upload.state.scanning" = "جارٍ فحص المجلد";
+"upload.state.tree" = "بناء الشجرة";
+"upload.state.uploading" = "جارٍ رفع الملفات";
+"upload.title" = "الرفع";
+"upload.warning.oversized" = "تم تخطي ملفات أكبر من 100 ميغابايت:";
+
+/* Selection */
+"common.select_all" = "تحديد الكل";
+"common.deselect_all" = "إلغاء تحديد الكل";
+
+/* Upload entry point */
+"upload.pick.title" = "رفع";
+"upload.pick.files" = "اختيار ملفات";
+"upload.pick.folder" = "اختيار مجلد";
+"upload.pick.drop_hint" = "يمكنك أيضًا سحب العناصر إلى هنا من تطبيق الملفات.";
+"upload.drop.here" = "أفلت هنا للرفع";
+
+/* Review sheet */
+"upload.options.selection" = "المحدد";
+"upload.options.items" = "%d عنصر";
+"upload.options.scanning" = "جارٍ قراءة الملفات وحساب بصمتها…";
+"upload.options.file_count" = "الملفات";
+"upload.options.total_size" = "الحجم الإجمالي";
+"upload.options.unchanged" = "محدّث مسبقًا";
+"upload.options.unchanged_badge" = "بدون تغيير";
+"upload.options.files" = "الملفات";
+"upload.options.files_hint" = "اضغط على ملف لتضمينه أو استبعاده. اسحب لحذفه نهائيًا.";
+"upload.options.no_files" = "لا يوجد ما يُرفع من هذا التحديد.";
+"upload.options.show_all" = "عرض كل الملفات (%d)";
+
+/* Conflicts */
+"conflict.policy" = "إذا كان الملف موجودًا مسبقًا";
+"conflict.policy.replace" = "استبدال";
+"conflict.policy.skip" = "تخطي";
+"conflict.policy.rename" = "الإبقاء على الاثنين (إعادة تسمية)";
+"conflict.title" = "%d ملفات موجودة مسبقًا";
+"conflict.hint" = "الملفات المتطابقة تمامًا يتم تخطيها دائمًا ولا يُعاد رفعها.";
+"conflict.badge" = "موجود";
+"conflict.renamed" = "أُعيدت تسميته";
+
+/* Transfer detail */
+"upload.detail.speed" = "السرعة";
+"upload.detail.remaining" = "الوقت المتبقي";
+"upload.eta" = "يتبقى %@";
+"upload.offline" = "في انتظار الاتصال — سيُستأنف الرفع تلقائيًا.";
+"upload.error.sources_unavailable" = "هذه العناصر لم تعد متاحة:";
+
+/* Folder support */
+"upload.pick.paste" = "لصق من الحافظة";
+"upload.error.drop_unreadable" = "تعذّرت قراءة ما تم إفلاته. جرّب اختياره من زر الرفع بدلاً من ذلك.";
+"upload.error.paste_empty" = "الحافظة لا تحتوي على ملفات أو مجلدات. انسخ عنصرًا من تطبيق الملفات أولاً.";
+"upload.pick.importing" = "جارٍ تجهيز المحدد…";
+"upload.error.capture_failed" = "تعذّر تجهيز بعض العناصر:";
+"upload.options.root_warning" = "‏%@ لا تعمل إلا في جذر المستودع. هذا الرفع سيضعها داخل مجلد فرعي.";

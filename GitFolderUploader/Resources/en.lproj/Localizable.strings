@@ -1,0 +1,290 @@
+/*
+  Localizable.strings
+  GitFolderUploader
+
+  English localization. Keys are grouped by feature and kept identical across
+  languages; `LocalizationManager` loads the matching .lproj bundle at runtime.
+*/
+
+
+/* MARK: - auth */
+"auth.device.denied" = "The request was denied on GitHub.";
+"auth.device.expired" = "The device code expired. Please start again.";
+"auth.device.failed" = "Device authorization failed.";
+"auth.device.instructions" = "Open GitHub on any device and enter this code:";
+"auth.device.missing_client" = "Enter your OAuth App Client ID first.";
+"auth.device.open" = "Open GitHub";
+"auth.device.pending" = "Waiting for you to approve the request on github.com.";
+"auth.device.slow_down" = "Slowing down polling as requested by GitHub.";
+"auth.device.waiting" = "Waiting for approval";
+"auth.headline" = "Git Folder Uploader";
+"auth.kind.oauth" = "OAuth device flow";
+"auth.kind.pat" = "Personal Access Token";
+"auth.mode" = "Sign-in method";
+"auth.mode.oauth" = "OAuth";
+"auth.mode.token" = "Access token";
+"auth.oauth.client_label" = "OAuth App Client ID";
+"auth.oauth.hint" = "Device flow needs only a Client ID — no client secret is ever embedded in the app.";
+"auth.oauth.start" = "Get device code";
+"auth.privacy" = "Credentials stay on this device. All traffic goes directly to the GitHub API.";
+"auth.signin" = "Sign in";
+"auth.subheadline" = "Upload entire folders from the Files app straight to GitHub, with the hierarchy preserved.";
+"auth.title" = "Sign in";
+"auth.token.create" = "Create a token on github.com";
+"auth.token.hint" = "The token needs the “repo” scope. It is stored in the iOS Keychain and never leaves the device.";
+"auth.token.label" = "Personal Access Token";
+
+/* MARK: - branch */
+"branch.create" = "New branch";
+"branch.create.hint" = "The new branch will start from %@.";
+"branch.error.chars" = "That name is not a valid Git reference.";
+"branch.error.empty" = "Enter a branch name.";
+"branch.filter" = "Filter branches";
+"branch.name" = "Branch name";
+"branch.title" = "Branches";
+
+/* MARK: - browser */
+"browser.delete.confirm" = "Delete this item?";
+"browser.delete.message" = "%@ will be removed in a new commit.";
+"browser.deleted" = "Deleted";
+"browser.download_folder" = "Download folder";
+"browser.empty.message" = "Upload a folder from the Files app to fill it.";
+"browser.empty.title" = "This folder is empty";
+"browser.folder_created" = "Folder created";
+"browser.folder_name" = "Folder name";
+"browser.new_folder" = "New folder";
+"browser.new_folder.hint" = "Git does not track empty folders, so a .gitkeep file is committed.";
+"browser.new_name" = "New name";
+"browser.no_results.message" = "Try a different search term.";
+"browser.no_results.title" = "No matches";
+"browser.pull" = "Pull latest";
+"browser.pulled" = "Up to date";
+"browser.rename" = "Rename";
+"browser.renamed" = "Renamed";
+"browser.search.content" = "Search file contents";
+"browser.search.prompt" = "Search files";
+"browser.search.results" = "%d results";
+"browser.searching" = "Searching…";
+"browser.upload_folder" = "Upload folder";
+"browser.upload_queued" = "Upload added to the queue";
+
+/* MARK: - common */
+"common.actions" = "Actions";
+"common.cancel" = "Cancel";
+"common.copy" = "Copy";
+"common.create" = "Create";
+"common.delete" = "Delete";
+"common.done" = "Done";
+"common.error" = "Error";
+"common.loading" = "Loading…";
+"common.ok" = "OK";
+"common.refresh" = "Refresh";
+"common.retry" = "Retry";
+"common.save" = "Save";
+
+/* MARK: - create */
+"create.auto_init" = "Initialise with a README";
+"create.auto_init.hint" = "An initial commit is required before folders can be pushed, so keep this on unless you know otherwise.";
+"create.description" = "Description";
+"create.error.chars" = "Use only letters, digits, dots, hyphens and underscores.";
+"create.error.empty" = "Enter a repository name.";
+"create.error.long" = "The name is too long.";
+"create.gitignore" = ".gitignore template (optional)";
+"create.name" = "Name";
+"create.private" = "Private repository";
+"create.section.basics" = "Basics";
+"create.section.options" = "Options";
+
+/* MARK: - download */
+"download.error.all_failed" = "None of the files could be downloaded.";
+
+/* MARK: - error */
+"error.cancelled" = "Cancelled.";
+"error.conflict" = "The repository changed while the request was in flight.";
+"error.decoding" = "Could not read the response";
+"error.file_too_large" = "File exceeds the 100 MB limit:";
+"error.folder_access" = "The app no longer has permission to read that folder. Pick it again.";
+"error.forbidden" = "Access denied. Check the token scopes.";
+"error.invalid_response" = "The server returned an unexpected response.";
+"error.invalid_url" = "Invalid URL";
+"error.missing_token" = "No access token is stored.";
+"error.network" = "Network error";
+"error.not_found" = "Not found.";
+"error.nothing_to_commit" = "There is nothing to commit.";
+"error.rate_limited" = "API rate limit reached. Retrying shortly.";
+"error.unauthorized" = "Your token is invalid or expired. Please sign in again.";
+"error.unknown" = "Unknown error.";
+"error.validation" = "GitHub rejected the request.";
+
+/* MARK: - file */
+"file.binary.message" = "This file is binary. Export it to open it in another app.";
+"file.binary.title" = "Preview unavailable";
+"file.branch" = "Branch";
+"file.export" = "Export";
+"file.path" = "Path";
+"file.sha" = "Blob SHA";
+"file.size" = "Size";
+
+/* MARK: - folder */
+"folder.error.empty" = "Enter a folder name.";
+"folder.error.name" = "That folder name is not allowed.";
+"folder.error.slash" = "Folder names cannot contain slashes.";
+
+/* MARK: - rename */
+"rename.error.empty" = "Enter a new name.";
+
+/* MARK: - repos */
+"repos.create" = "New repository";
+"repos.empty.message" = "Create your first repository to start uploading folders.";
+"repos.empty.title" = "No repositories yet";
+"repos.filter" = "Filter repositories";
+"repos.title" = "Repositories";
+
+/* MARK: - search */
+"search.none.message" = "Try a different query.";
+"search.none.title" = "No repositories found";
+"search.prompt" = "Search GitHub repositories";
+"search.searching" = "Searching…";
+"search.start.message" = "Type at least two characters to search public and private repositories you can access.";
+"search.start.title" = "Search GitHub";
+"search.title" = "Search";
+
+/* MARK: - settings */
+"settings.about.blurb" = "Git Folder Uploader talks directly to the GitHub REST API. Folder uploads use the Git Data API so thousands of files land in a single commit.";
+"settings.auth_method" = "Signed in with";
+"settings.language" = "App language";
+"settings.language.hint" = "The interface, including layout direction, updates immediately.";
+"settings.language.system" = "Match system";
+"settings.open_profile" = "Open GitHub profile";
+"settings.queue" = "Active uploads";
+"settings.rate_limit" = "API requests left";
+"settings.rate_reset" = "Resets";
+"settings.rate_unknown" = "No API calls made yet in this session.";
+"settings.repos.private" = "Private repositories";
+"settings.repos.public" = "Public repositories";
+"settings.section.about" = "About";
+"settings.section.account" = "Account";
+"settings.section.appearance" = "Appearance";
+"settings.section.diagnostics" = "Diagnostics";
+"settings.section.language" = "Language";
+"settings.signout" = "Sign out";
+"settings.signout.confirm" = "Sign out?";
+"settings.signout.message" = "The stored token is removed and pending uploads are cancelled.";
+"settings.theme" = "Theme";
+"settings.theme.dark" = "Dark";
+"settings.theme.light" = "Light";
+"settings.theme.system" = "Match system";
+"settings.version" = "Version";
+
+/* MARK: - tab */
+"tab.repositories" = "Repositories";
+"tab.search" = "Search";
+"tab.settings" = "Settings";
+"tab.uploads" = "Uploads";
+
+/* MARK: - upload */
+"upload.clear_finished" = "Clear finished";
+"upload.detail.branch" = "Branch";
+"upload.detail.commit" = "Commit";
+"upload.detail.destination" = "Destination";
+"upload.detail.files" = "Files";
+"upload.detail.repository" = "Repository";
+"upload.detail.size" = "Total size";
+"upload.detail.skipped" = "Unchanged";
+"upload.detail.summary" = "Summary";
+"upload.detail.transferred" = "Transferred";
+"upload.detail.truncated" = "Showing the first 500 of %d files.";
+"upload.empty.message" = "Open a repository and choose “Upload folder” to queue one.";
+"upload.empty.title" = "No uploads yet";
+"upload.error.empty_folder" = "The selected folder contains no uploadable files.";
+"upload.error.files_failed" = "%d files could not be uploaded.";
+"upload.filter" = "Filter";
+"upload.filter.all" = "All";
+"upload.filter.failed" = "Failed";
+"upload.filter.pending" = "Pending";
+"upload.filter.skipped" = "Skipped";
+"upload.filter.uploaded" = "Uploaded";
+"upload.missing.message" = "This upload was removed from the queue.";
+"upload.missing.title" = "Job not found";
+"upload.options.branch" = "Branch";
+"upload.options.commit" = "Commit";
+"upload.options.custom_path" = "Custom path (optional)";
+"upload.options.default_message" = "Upload %@";
+"upload.options.destination" = "Destination";
+"upload.options.destination_root" = "Repository root";
+"upload.options.explainer" = "Files already present with identical content are skipped, and everything is pushed as a single commit.";
+"upload.options.folder" = "Folder";
+"upload.options.message" = "Commit message";
+"upload.options.place_inside" = "Place inside a folder named “%@”";
+"upload.options.repository" = "Repository";
+"upload.options.source" = "Source";
+"upload.options.start" = "Upload";
+"upload.options.title" = "Upload folder";
+"upload.pause" = "Pause";
+"upload.remove" = "Remove from queue";
+"upload.resume" = "Resume";
+"upload.resume_all" = "Resume all";
+"upload.section.active" = "In progress";
+"upload.section.finished" = "Finished";
+"upload.skipped" = "%d unchanged";
+"upload.state.cancelled" = "Cancelled";
+"upload.state.committing" = "Committing";
+"upload.state.comparing" = "Comparing with remote";
+"upload.state.completed" = "Completed";
+"upload.state.failed" = "Failed";
+"upload.state.paused" = "Paused";
+"upload.state.queued" = "Queued";
+"upload.state.scanning" = "Scanning folder";
+"upload.state.tree" = "Building tree";
+"upload.state.uploading" = "Uploading files";
+"upload.title" = "Uploads";
+"upload.warning.oversized" = "Skipped files larger than 100 MB:";
+
+/* Selection */
+"common.select_all" = "Select all";
+"common.deselect_all" = "Deselect all";
+
+/* Upload entry point */
+"upload.pick.title" = "Upload";
+"upload.pick.files" = "Choose files";
+"upload.pick.folder" = "Choose folder";
+"upload.pick.drop_hint" = "You can also drag items here from the Files app.";
+"upload.drop.here" = "Drop to upload";
+
+/* Review sheet */
+"upload.options.selection" = "Selection";
+"upload.options.items" = "%d items";
+"upload.options.scanning" = "Reading and hashing files…";
+"upload.options.file_count" = "Files";
+"upload.options.total_size" = "Total size";
+"upload.options.unchanged" = "Already up to date";
+"upload.options.unchanged_badge" = "Unchanged";
+"upload.options.files" = "Files";
+"upload.options.files_hint" = "Tap a file to include or exclude it. Swipe to remove it entirely.";
+"upload.options.no_files" = "Nothing to upload from this selection.";
+"upload.options.show_all" = "Show all %d files";
+
+/* Conflicts */
+"conflict.policy" = "If a file already exists";
+"conflict.policy.replace" = "Replace";
+"conflict.policy.skip" = "Skip";
+"conflict.policy.rename" = "Keep both (rename)";
+"conflict.title" = "%d files already exist";
+"conflict.hint" = "Files whose content is identical are always skipped and never re-uploaded.";
+"conflict.badge" = "Exists";
+"conflict.renamed" = "Renamed";
+
+/* Transfer detail */
+"upload.detail.speed" = "Speed";
+"upload.detail.remaining" = "Time remaining";
+"upload.eta" = "%@ left";
+"upload.offline" = "Waiting for a connection — uploads resume automatically.";
+"upload.error.sources_unavailable" = "These items are no longer accessible:";
+
+/* Folder support */
+"upload.pick.paste" = "Paste from clipboard";
+"upload.error.drop_unreadable" = "Nothing in that drop could be read. Try picking it with the Upload button instead.";
+"upload.error.paste_empty" = "The clipboard holds no files or folders. Copy an item in the Files app first.";
+"upload.pick.importing" = "Preparing the selection…";
+"upload.error.capture_failed" = "Some items could not be prepared:";
+"upload.options.root_warning" = "%@ only work at the repository root. This upload would put them in a subfolder.";
